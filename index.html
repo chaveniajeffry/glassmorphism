@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="images/facebook.png" id="favicon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glassmorphism CSS3</title>
+    <!-- SEO meta tags -->
+    <meta property="og:title" content="Glassmorphism CSS3">
+    <meta property="og:description" content="Glassmorphism effect using css3">
+    <meta property="og:image" content="/images/preview.PNG">
+    <meta property="og:url" content="https://chaveniajeffry.github.io/glassmorphism/">
+    <!-- end SEO meta tags -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,5 +28,20 @@
         </div>
     </div>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script>
+        // Function to change the favicon
+        function changeFavicon(iconPath) {
+          document.getElementById('favicon').href = iconPath;
+          console.log(iconPath)
+        }
+    
+        // Example usage: Change the favicon every 3 seconds
+        setInterval(function() {
+          var icons = ['images/facebook.png', 'images/twitter.png', 'images/telegram.png']; // Array of different favicon images
+          var randomIconIndex = Math.floor(Math.random() * icons.length); // Generate random index
+          var randomIcon = icons[randomIconIndex]; // Get random icon from array
+          changeFavicon(randomIcon); // Change favicon
+        }, 1000); // Change every 3 seconds (3000 milliseconds)
+      </script>
 </body>
 </html>
